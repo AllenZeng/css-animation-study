@@ -4,12 +4,11 @@
   "description": "track user behavior javascript sdk",
   "main": "index.js",
   "scripts": {
-    "build": "webpack -p --config webpack.pro.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git@git.coding.net:picbling/fi-sdk-js.git"
+    "url": "git@github.com:AllenZeng/css-animation-study.git"
   },
   "author": "picbling",
   "license": "ISC",
