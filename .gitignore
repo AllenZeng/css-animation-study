@@ -1,0 +1,13 @@
+# Logs
+npm-debug.log*
+
+# 系统产生文件
+.idea
+.DS_Store
+
+# 项目build输出文件
+dist
+
+# Dependency directory
+# https://docs.npmjs.com/misc/faq#should-i-check-my-node-modules-folder-into-git
+node_modules
