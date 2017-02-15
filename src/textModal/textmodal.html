@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.one {
+			font-size: 50px;
+			text-shadow: 
+				0 -2px 3px #fff,
+				0 -4px 3px #aaa,
+				0 -6px 6px #666,
+				0 -8px 9px #000;
+		}
+		.two {
+			font-size: 50px;
+			color: #fff;
+			text-shadow: 
+				0 2px rgba(0,0,0,0.4),
+				0 4px rgba(0,0,0,0.4),
+				0 6px rgba(0,0,0,0.4),
+				0 8px rgba(0,0,0,0.4);
+		}
+
+		.letterpress { background-color: #565656;  }
+		h1 {
+			color: #333;
+			text-shadow: 0 1px 0 #777, 0 -1px 0 #000;
+		}
+
+		.test-stroke h1 {
+			color: #555;
+			-webkit-text-fill-color: white;
+			-webkit-text-stroke-color: #555;
+			-webkit-text-stroke-width: 3px;
+		}
+		.fast { text-rendering: optimizeSpeed; }
+		.legible { text-rendering: optimizeLegibility; }
+	</style>
+</head>
+<body>
+	<div>
+		<p>text-shadow:</p>
+		<p class="one">css3</p>
+		<p class="two">css3</p>
+	</div>
+	<div class="letterpress">
+		<h1>Letterpress</h1>
+	</div>
+
+	<div class="test-stroke">
+		<h1>text stroke</h1>
+	</div>
+
+	<div>
+		<p class="fast">THIS IS TEST TEXT RENDERING</p>
+		<p class="legible">THIS IS TEST TEXT RENDERING</p>
+	</div>
+</body>
+</html>
