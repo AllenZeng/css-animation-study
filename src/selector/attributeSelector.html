@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		html:root { background-color: #f0f0f0;  }
+		a[rel*='n'] { color: red; }
+		.comment:target { background-color: #ddd;  }
+		p:empty { background-color: red; width: 10px; height: 10px; }
+		.notClass > p:not(:first-child) { font-style: italic; }
+		input[type='text']:disabled { border: 1px solid gray; }
+		input[type='text']:enabled { border: 1px solid black; }
+		.test-firstletter>p::first-letter { font-size: 50px; }
+		.test-firstletter::before { content: ' '; height: 20px; }
+		.test-selection p::selection { background: red; color: white; }
+
+		@font-face {
+			font-family: Chunk;
+			src: url('filename.eot');
+			src: local(' '),
+				url('filename.woff') format('woff'),
+				url('filename.ttf') format('truetype'),
+				url('filename.svg#filename') format('svg');
+		}
+		h2.webfont { font-family: Chunk; }
+	</style>
+</head>
+<body>
+	<ul>
+		<li><a href="" lang="en-gb" rel="friend met">petter</a></li>
+		<li><a href="" lang="es-es" rel="friend">pedro</a></li>
+		<li><a href="" lang="es-mx" rel="contact">pancho</a></li>
+	</ul>
+
+	<div>
+		<div class="comment" id="comment-01">
+			<p>thanks for this scintillating example</p>
+			<p class="author">n e boddy april 13</p>
+		</div>
+	</div>
+	<p><a href="#comment-01">latest comment</a></p>
+	<p></p>
+
+	<div class="notClass">
+		<p>lorem ipsum dolor sit amet...</p>
+		<p>nunc consectetur tempor justo...</p>
+		<p>nunc portitiror malesuada cursus...</p>
+	</div>
+
+	<form action="">
+		<fieldset>
+			<legend>ui elemnet state pseudo classes</legend>
+			<input type="text" value="lorem ipsum" disabled>
+			<input type="text" value="lorem ipsum">
+		</fieldset>
+	</form>
+
+	<div class="test-firstletter">
+		<p>this is test ::first-letter</p>
+	</div>
+
+	<div class="test-selection">
+		<p>this is test</p>
+		<p>this is test ::selection</p>
+	</div>
+
+	<div>
+		<h2>alas, poor yorick!</h2>
+		<h2 class="webfont">alas, poor yorick!</h2>
+	</div>
+</body>
+</html>
