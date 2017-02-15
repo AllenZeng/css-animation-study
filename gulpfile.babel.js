@@ -40,7 +40,7 @@ gulp.task('css', () => gulp.src('src/**/*.css')
     .pipe(gulp.dest('dist/'))
     .pipe(browserSync.stream()));
 
-gulp.task('img', () => gulp.src('src/public/*.JPG')
+gulp.task('img', () => gulp.src('src/public/*.*')
   .pipe(gulp.dest('dist/public/')));
 
 gulp.task('clean', () => del(['dist']));
