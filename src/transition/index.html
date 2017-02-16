@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.test {
+			background-color: black;
+			transition: background-color 2s ease-out 250ms;
+			height: 100px;
+			width: 100px;
+		}
+		.test:hover {
+			background-color: silver;
+		}
+
+		h1 {
+			font-size: 150%;
+			transition: font-size 2s ease-out 250ms;
+		}
+		h1:hover { font-size: 600%; }
+
+		@keyframes borderchange {
+			from { border-width: 10px; }
+			50% { border-width: 1px; }
+			to {
+				border-width: 1px;
+				height: 120px;
+				width: 150px;
+			}
+		}
+
+		.animation {
+			border: 4px solid black;
+			height: 100px;
+			width: 100px;
+			box-sizing: border-box;
+			animation: borderchange 3s ease-in 1s 10 alternate;
+		}
+	</style>
+</head>
+<body>
+	<div class="test"></div>
+	<h1>this is test transition</h1>
+	<div class="animation">test animation</div>
+</body>
+</html>
