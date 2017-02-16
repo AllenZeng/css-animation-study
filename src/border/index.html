@@ -16,11 +16,32 @@
 	    overflow: hidden;
 	    width: 200px;
 		}
+		.border-1 {
+			width: 200px;
+			height: 200px;
+			border: 50px solid rgba(0,0,0,0.5);
+		}
+		p { color: black; }
+		p:last-child {
+			background-color: black;
+			color: white;
+			height: 30px;
+		}
+		p abbr { border-bottom: 6px double currentColor; }
+
+		button { -webkit-appearance: button; }
+		button.native { -webkit-appearance: none; }
 	</style>
 </head>
 <body>
 	<div class="container">
 		<div class="borderimage">this is test border image</div>
 	</div>
+
+	<div class="border-1"></div>
+	<p>the central inrelligence agency(<abbr>cia</abbr>)</p>
+	<p>the federal bureau of investigation(<abbr title="fbi">fbi</abbr>)</p>
+	<button>this is test</button>
+	<button class="native">go</button>
 </body>
 </html>
