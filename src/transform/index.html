@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		h3 { width: 300px; }
+		.rotate {
+			transform: rotate(15deg);
+			/*transform: skew(-15deg, 15deg);*/
+			transform-origin: 0 0;
+			background-color: #aaa;
+		}
+		.translate {
+			transform: translate(20px, 15px);
+		}
+		span {
+		  transform: rotate(5deg);
+    	display: inline-block;
+		}
+
+		.skew h2 {
+			transform: skew(303deg, 209deg);
+	    background-color: #aaa;
+	    width: 200px;
+		}
+		.scale h2 {
+			transform: scale(1, -1);
+    	width: 200px;
+		}
+
+		.total {
+			width: 400px;
+	    height: 400px;
+	    background-color: #aaa;
+	    overflow: hidden;
+		}
+
+		.total h2 {
+			background-color: green;
+	    transform: rotate(-40deg) scale(0.75) translate(-40%, -400%);
+	    text-align: center;
+		}
+		.matrix h2 {
+			transform: matrix(2, 0, 0, 2, 15, 15);
+    	width: 400px;
+		}
+
+		.reflect { height: 100px; }
+		.reflect h2 {
+			-webkit-box-reflect: below 0 gradient(linear, 50% 0, 50% 100%, from(transparent), to(white));
+		}
+	</style>
+</head>
+<body>
+	<h3 class="rotate">now with added css3</h3>
+	<p>this is test</p>
+	<h3 class="translate">this is test translate</h3>
+	<p>this is test</p>
+	<span>this is span</span><span>this is other span</span>
+
+	<div class="skew">
+		<h2>this is test skew</h2>
+	</div>
+
+	<div class="scale"><h2>this test scale</h2></div>
+
+	<div class="total"><h2>this is test</h2></div>
+
+	<div class="matrix">
+		<h2>this is test matrix</h2>
+	</div>
+
+	<div class="reflect"><h2>now with added css3</h2></div>
+</body>
+</html>
