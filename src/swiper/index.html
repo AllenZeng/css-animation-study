@@ -96,6 +96,7 @@
 		  // this.fadeOut;
 		  this.bindTouchEvn(); //初始化绑定滑动事件
 		  this.showPic(this.cur_img); //显示图片方法,注意其中图片编号的-1处理
+		  this.autoPlay(); // 自动播放
 		}
 
 		ImageSwiper.prototype.bindTouchEvn = function() {
@@ -129,7 +130,6 @@
 		      }
 		      this.cur_img++;
 		      this.showPic(this.cur_img);
-
 		    } else if (releasedAt - minRange > touchX) {
 		      if (this.cur_img <= 1) {
 		        this.cur_img = imgs_count + 1
@@ -196,6 +196,16 @@
 
 		ImageSwiper.prototype.hidePics = function(e) {
 		  this.fadeOut(e)
+		}
+
+		ImageSwiper.prototype.autoPlay = function() {
+			setInterval(() => {
+				if (this.cur_img > (this.imgs_count - 1)) {
+	        this.cur_img = 0;
+	      }
+	      this.cur_img++;
+	      this.showPic(this.cur_img);
+			}, 2000)
 		}
 
 		//传参
