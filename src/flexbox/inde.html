@@ -4,20 +4,50 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<style>
-		.flexbox-holder {
-			display: -webkit-box;
-			width: 600px;
+		.flexbox-box {
+			border: 1px solid red;
+			background-color: #e8e8e9;
+			display: flex;
+			flex-direction: row; /* 其他值： column || row-reverse || column-reverse */
+			flex-wrap: wrap; /* 其他值：nowrap || wrap-reverse*/
+			flex-flow: row wrap; /* 上面两个的简写形式*/
+			justify-content: center; /*子元素的开始位置 flex-start || flex-end || center || space-between || space-around*/
+			align-items: baseline; /*定义每列子元素内容的对齐方式：flex-start || flex-end || center || stretch || baseline*/
+			align-content: space-around; /* 定义多列flex子元素适应父容器的对其方式：stretch || flex-start || flex-end || center || space-between*/
 		}
 		.flex {
-			width: 200px;
+			width: 300px;
+			height: 100px;
+			margin: 8px;
+			padding: 4px;
+			background-color: #8cacea;
+			flex-grow: 1; /* 父元素剩余空间，子元素相应扩大的比例*/
+			flex-shrink: 1; /* 超出父元素的空间，子元素相应缩小的比例*/
+			/*flex-basis: */
+		}
+		.flex:nth-child(1),
+		.flex:nth-child(3) {
+			order: 1; /* 改变元素的显示顺序*/
+		}
+
+		.flex:nth-child(2) {
+			order: 2;
 		}
 	</style>
 </head>
 <body>
-	<div class="flexbox-holder">
+	<div class="flexbox-box">
 		<div class="flex">1</div>
 		<div class="flex">2</div>
 		<div class="flex">3</div>
+		<div class="flex">4</div>
+		<div class="flex">5</div>
+		<div class="flex">6</div>
+		<div class="flex">7</div>
+		<div class="flex">8</div>
+		<div class="flex">9</div>
+		<div class="flex">10</div>
+		<div class="flex">11</div>
 	</div>
 </body>
 </html>
